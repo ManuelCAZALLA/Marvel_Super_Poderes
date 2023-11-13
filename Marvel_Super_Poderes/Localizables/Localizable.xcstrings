@@ -1,0 +1,114 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add Item" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Item"
+          }
+        }
+      }
+    },
+    "Email" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        }
+      }
+    },
+    "Heroes" : {
+
+    },
+    "Item at %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item at"
+          }
+        }
+      }
+    },
+    "Login" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Login"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entrar"
+          }
+        }
+      }
+    },
+    "Obtener Héroes" : {
+
+    },
+    "Password" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contraseña"
+          }
+        }
+      }
+    },
+    "Select an item" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select an item"
+          }
+        }
+      }
+    },
+    "Series" : {
+
+    },
+    "Test" : {
+      "comment" : "Localizable.strings\n  Marvel_Super_Poderes\n\n  Created by Manuel Cazalla Colmenero on 10/11/23.",
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test ESP"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test ESP"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
