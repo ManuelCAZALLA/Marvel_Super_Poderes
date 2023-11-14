@@ -8,9 +8,9 @@
 import Foundation
 
 enum Status {
-    case none
-    case loading
-    case loaded
-    case register
+    case initialSplash
+    case heroes
+    case secondSplash
+    case series
     case error(error: String)
 }

@@ -8,10 +8,13 @@
 import Foundation
 import Combine
 
-class RootViewModel: ObservableObject {
+final class RootViewModel: ObservableObject {
     private var suscriptor: Set<AnyCancellable> = []
     
+    @Published var status = Status.initialSplash
+    
     func fetchHeroes() {
+       
         let request = Networking().getHeroes()
         
         URLSession.shared.dataTaskPublisher(for: request)
@@ -40,3 +43,4 @@ class RootViewModel: ObservableObject {
             .store(in: &suscriptor)
     }
 }
+

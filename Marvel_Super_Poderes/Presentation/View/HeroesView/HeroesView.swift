@@ -8,27 +8,37 @@
 import SwiftUI
 
 struct HeroesView: View {
-    @EnvironmentObject var rootViewMoel: RootViewModel
-    var net: Networking // Pasar como dependencia
-    
-    init(networking: Networking) {
-        self.net = networking
-    }
+    @EnvironmentObject var rootViewModel: RootViewModel
+   
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack {
-                HStack {
-                    Button("Obtener Héroes") {
-                        rootViewMoel.fetchHeroes()
-                        
-                    }
+        TabView {
+            /*Button(action: {
+                rootViewModel.fetchHeroes()
+            }, label: {
+                Text("Obtener Heroes")
+         })   */
+            Text("Heroes")
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("Heroes")
                 }
-               
-            }
+                .environmentObject(rootViewModel)
+
+            // Contenido de la segunda pestaña (Series)
+            Text("Series")
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("Series")
+                }
+           
         }
+        
     }
 }
 
-
+#Preview {
+    HeroesView()
+        .environmentObject(RootViewModel())
+}
 
