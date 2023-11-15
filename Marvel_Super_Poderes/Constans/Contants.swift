@@ -15,6 +15,7 @@ let hash1 = "30465a13526b5a1e20215eafecaead1e"
 struct HTTPMethods {
     static let get = "GET"
     static let post = "POST"
+    static let content = "application/json"
 }
 
 enum Endpoints: String {

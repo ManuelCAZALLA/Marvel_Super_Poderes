@@ -19,7 +19,8 @@ struct RootView: View {
             }
         case .heroes:
             withAnimation {
-                HeroesView()
+                HeroesView(ViewModel: ViewModelHeroes())
+                
             }
         case .secondSplash:
             withAnimation {

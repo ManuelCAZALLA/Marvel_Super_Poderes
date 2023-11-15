@@ -17,7 +17,6 @@
 		3C0C69F22AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C69F12AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.swift */; };
 		3C0C69FC2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C69FB2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.swift */; };
 		3C0C69FE2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C69FD2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITestsLaunchTests.swift */; };
-		3C0C6A192AFD30C1005E8D24 /* Extension+URLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A182AFD30C1005E8D24 /* Extension+URLResponse.swift */; };
 		3C0C6A1B2AFD3F86005E8D24 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A1A2AFD3F86005E8D24 /* Networking.swift */; };
 		3C0C6A212AFD66B8005E8D24 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3C0C6A202AFD66B8005E8D24 /* KeychainSwift */; };
 		3C0C6A2C2AFEAB09005E8D24 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0C6A2B2AFEAB09005E8D24 /* Localizable.xcstrings */; };
@@ -26,6 +25,9 @@
 		3C0C6A322AFF68CF005E8D24 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A312AFF68CF005E8D24 /* StatusModel.swift */; };
 		3C0C6A352AFF7493005E8D24 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A342AFF7493005E8D24 /* Contants.swift */; };
 		3C0C6A372AFF7A84005E8D24 /* HeroesMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A362AFF7A84005E8D24 /* HeroesMarvel.swift */; };
+		3C13F6E72B04A370001F95F3 /* SecondSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F6E62B04A370001F95F3 /* SecondSplashView.swift */; };
+		3C13F6EA2B04A3B1001F95F3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F6E92B04A3B1001F95F3 /* DetailView.swift */; };
+		3C13F6ED2B04E5A1001F95F3 /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F6EC2B04E5A1001F95F3 /* HeroesRowView.swift */; };
 		3C17CD752B03E83C00A6B3D1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD742B03E83C00A6B3D1 /* RootView.swift */; };
 		3C17CD772B03EAA700A6B3D1 /* initialSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD762B03EAA700A6B3D1 /* initialSplash.swift */; };
 		3CFBAC5F2B04005C00C29EBB /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBAC5E2B04005C00C29EBB /* ErrorView.swift */; };
@@ -63,7 +65,6 @@
 		3C0C69F72AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Marvel_Super_PoderesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0C69FB2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_Super_PoderesUITests.swift; sourceTree = "<group>"; };
 		3C0C69FD2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_Super_PoderesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3C0C6A182AFD30C1005E8D24 /* Extension+URLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URLResponse.swift"; sourceTree = "<group>"; };
 		3C0C6A1A2AFD3F86005E8D24 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		3C0C6A2B2AFEAB09005E8D24 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3C0C6A2D2AFEAC1B005E8D24 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -71,6 +72,9 @@
 		3C0C6A312AFF68CF005E8D24 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		3C0C6A342AFF7493005E8D24 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		3C0C6A362AFF7A84005E8D24 /* HeroesMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMarvel.swift; sourceTree = "<group>"; };
+		3C13F6E62B04A370001F95F3 /* SecondSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSplashView.swift; sourceTree = "<group>"; };
+		3C13F6E92B04A3B1001F95F3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3C13F6EC2B04E5A1001F95F3 /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
 		3C17CD742B03E83C00A6B3D1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3C17CD762B03EAA700A6B3D1 /* initialSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialSplash.swift; sourceTree = "<group>"; };
 		3CFBAC5E2B04005C00C29EBB /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -186,7 +190,6 @@
 		3C0C6A0B2AFD2D5D005E8D24 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				3C0C6A172AFD307F005E8D24 /* Extension */,
 				3C0C6A122AFD2DEB005E8D24 /* UseCases */,
 				3C0C6A112AFD2DD1005E8D24 /* Models */,
 			);
@@ -205,6 +208,9 @@
 		3C0C6A0D2AFD2D78005E8D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C13F6EB2B04E586001F95F3 /* HeroesRow */,
+				3C13F6E82B04A39B001F95F3 /* Detail */,
+				3C13F6E52B04A34B001F95F3 /* SecondSplash */,
 				3CFBAC5D2B04002800C29EBB /* ErrorView */,
 				3C17CD792B03EB1E00A6B3D1 /* RootView */,
 				3C17CD782B03EAB200A6B3D1 /* InitialSplash */,
@@ -270,14 +276,6 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
-		3C0C6A172AFD307F005E8D24 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				3C0C6A182AFD30C1005E8D24 /* Extension+URLResponse.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		3C0C6A222AFEA87F005E8D24 /* Localizables */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +290,30 @@
 				3C0C6A342AFF7493005E8D24 /* Contants.swift */,
 			);
 			path = Constans;
+			sourceTree = "<group>";
+		};
+		3C13F6E52B04A34B001F95F3 /* SecondSplash */ = {
+			isa = PBXGroup;
+			children = (
+				3C13F6E62B04A370001F95F3 /* SecondSplashView.swift */,
+			);
+			path = SecondSplash;
+			sourceTree = "<group>";
+		};
+		3C13F6E82B04A39B001F95F3 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3C13F6E92B04A3B1001F95F3 /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3C13F6EB2B04E586001F95F3 /* HeroesRow */ = {
+			isa = PBXGroup;
+			children = (
+				3C13F6EC2B04E5A1001F95F3 /* HeroesRowView.swift */,
+			);
+			path = HeroesRow;
 			sourceTree = "<group>";
 		};
 		3C17CD782B03EAB200A6B3D1 /* InitialSplash */ = {
@@ -457,17 +479,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0B1F162B012C6A00EFEA9A /* HeroesView.swift in Sources */,
+				3C13F6EA2B04A3B1001F95F3 /* DetailView.swift in Sources */,
 				3C17CD772B03EAA700A6B3D1 /* initialSplash.swift in Sources */,
 				3CFBAC612B040AF100C29EBB /* ViewModelHeroes.swift in Sources */,
 				3C0C69E52AFD2CE8005E8D24 /* Persistence.swift in Sources */,
+				3C13F6ED2B04E5A1001F95F3 /* HeroesRowView.swift in Sources */,
 				3C0C6A372AFF7A84005E8D24 /* HeroesMarvel.swift in Sources */,
 				3C0C69E82AFD2CE8005E8D24 /* Marvel_Super_Poderes.xcdatamodeld in Sources */,
-				3C0C6A192AFD30C1005E8D24 /* Extension+URLResponse.swift in Sources */,
 				3C0C6A1B2AFD3F86005E8D24 /* Networking.swift in Sources */,
 				3C0C6A322AFF68CF005E8D24 /* StatusModel.swift in Sources */,
 				3C0C6A2E2AFEAC1B005E8D24 /* KeychainManager.swift in Sources */,
 				3C0C69DE2AFD2CE6005E8D24 /* ContentView.swift in Sources */,
 				3CFBAC5F2B04005C00C29EBB /* ErrorView.swift in Sources */,
+				3C13F6E72B04A370001F95F3 /* SecondSplashView.swift in Sources */,
 				3C17CD752B03E83C00A6B3D1 /* RootView.swift in Sources */,
 				3C0C6A302AFEB6EF005E8D24 /* RootViewModel.swift in Sources */,
 				3C0C6A352AFF7493005E8D24 /* Contants.swift in Sources */,

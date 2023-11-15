@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@" : {
+
+    },
     "Add Item" : {
       "localizations" : {
         "en" : {
@@ -10,6 +13,12 @@
           }
         }
       }
+    },
+    "Cargando..." : {
+
+    },
+    "Detail" : {
+
     },
     "Email" : {
       "extractionState" : "stale",
@@ -27,9 +36,6 @@
           }
         }
       }
-    },
-    "error" : {
-
     },
     "Heroes" : {
 
@@ -60,9 +66,6 @@
           }
         }
       }
-    },
-    "Obtener Heroes" : {
-
     },
     "Password" : {
       "extractionState" : "stale",
@@ -114,6 +117,9 @@
           }
         }
       }
+    },
+    "Volver a cargar" : {
+
     }
   },
   "version" : "1.0"

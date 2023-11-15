@@ -8,37 +8,31 @@
 import SwiftUI
 
 struct HeroesView: View {
-    @EnvironmentObject var rootViewModel: RootViewModel
-   
+    @StateObject var ViewModel: ViewModelHeroes
     
     var body: some View {
-        TabView {
-            /*Button(action: {
-                rootViewModel.fetchHeroes()
-            }, label: {
-                Text("Obtener Heroes")
-         })   */
-            Text("Heroes")
-                .tabItem {
-                    Image(systemName: "person.3.fill")
-                    Text("Heroes")
-                }
-                .environmentObject(rootViewModel)
+        NavigationStack {
+            List{
+                if let heroes = ViewModel.heroes{
+                    ForEach(heroes){ hero in
+                        NavigationLink {
+                            // TODO: DETAIL
+                        } label: {
+                           HeroesRowView(heroes: hero)
+                                .frame(height: 200)
+                        }
 
-            // Contenido de la segunda pestaña (Series)
-            Text("Series")
-                .tabItem {
-                    Image(systemName: "person.3.fill")
-                    Text("Series")
+                    }
                 }
-           
+            }
+            .navigationTitle("Heroes")
         }
         
     }
 }
-
 #Preview {
-    HeroesView()
-        .environmentObject(RootViewModel())
-}
+    HeroesView(ViewModel: ViewModelHeroes(testing: true))
+        
+    }
+    
 

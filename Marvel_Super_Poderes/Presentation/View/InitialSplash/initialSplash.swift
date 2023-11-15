@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import Combine
 
 struct initialSplash: View {
+    @State private var isTimerActive = false
+    @EnvironmentObject var rootViewModel: RootViewModel
+    
     var body: some View {
         
         ZStack{
-           Image(.fondoApp)
+            Image(.fondoApp)
                 .resizable()
                 .opacity(1)
             
@@ -27,32 +31,34 @@ struct initialSplash: View {
                     .opacity(0.8)
                     .padding(.top, 20)
                     .padding([.leading, .trailing], 50)
-               Spacer()
+                Spacer()
                 
                 Image(systemName: "circle.dashed")
-                        .resizable()
-                        .foregroundColor(.blue)
-                        .frame(width: 100, height: 100)
-                    
-                    Text("Cargando...")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        
-                Spacer()
-                    
+                    .resizable()
+                    .foregroundColor(.blue)
+                    .frame(width: 100, height: 100)
                 
-               Image(.keepcoding1)
+                Text("Cargando...")
+                    .foregroundColor(.white)
+                    .font(.title)
+                
+                Spacer()
+                
+                
+                Image(.keepcoding1)
                     .resizable()
                     .scaledToFit()
                     .opacity(0.8)
                     .padding(.bottom, 20)
                     .padding([.leading, .trailing], 70)
-                }
-           
+            }
+            
         }
         .ignoresSafeArea()
+        
     }
 }
+
 
 #Preview {
     initialSplash()
