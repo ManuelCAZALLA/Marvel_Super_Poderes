@@ -14,7 +14,7 @@ struct Marvel_Super_PoderesApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HeroesView(ViewModel: ViewModelHeroes(testing: true))
+            HeroesView(ViewModel: ViewModelHeroes(testing: false))
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(rootViewModel)
                

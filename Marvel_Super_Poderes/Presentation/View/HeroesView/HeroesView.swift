@@ -13,26 +13,29 @@ struct HeroesView: View {
     var body: some View {
         NavigationStack {
             List{
-                if let heroes = ViewModel.heroes{
-                    ForEach(heroes){ hero in
-                        NavigationLink {
-                            // TODO: DETAIL
-                        } label: {
-                           HeroesRowView(heroes: hero)
-                                .frame(height: 200)
+                if let heroes = ViewModel.heroes {
+                    ForEach(heroes){ heroe in
+                            NavigationLink {
+                                SeriesView(viewModelSerie: SeriesViewModel(heroe: heroe), heroe: heroe)
+                            } label: {
+                                HeroesRowView(heroes: heroe)
+                                    .frame(height: 200)
+                                
+                            }
                         }
-
                     }
                 }
             }
-            .navigationTitle("Heroes")
         }
-        
     }
-}
+
+                  
+
+          
 #Preview {
-    HeroesView(ViewModel: ViewModelHeroes(testing: true))
+    HeroesView(ViewModel: ViewModelHeroes(testing: false))
         
     }
     
+
 

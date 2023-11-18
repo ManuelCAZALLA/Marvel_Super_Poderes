@@ -17,9 +17,6 @@
     "Cargando..." : {
 
     },
-    "Detail" : {
-
-    },
     "Email" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -36,9 +33,6 @@
           }
         }
       }
-    },
-    "Heroes" : {
-
     },
     "Item at %@" : {
       "localizations" : {
@@ -66,6 +60,9 @@
           }
         }
       }
+    },
+    "No description" : {
+
     },
     "Password" : {
       "extractionState" : "stale",

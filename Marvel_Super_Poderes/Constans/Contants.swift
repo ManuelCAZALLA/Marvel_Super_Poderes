@@ -6,19 +6,29 @@
 //
 
 import Foundation
-let apiKey = "182f1965b7b85d44b12945225e855bee"
-let privateKey = "feef4e98e55e653555f9254f889a7311e7179a9b"
-let baseURL1 = "https://gateway.marvel.com:443"
-let ts = String(Date().timeIntervalSince1970)
-let hash1 = "30465a13526b5a1e20215eafecaead1e"
 
-struct HTTPMethods {
-    static let get = "GET"
-    static let post = "POST"
-    static let content = "application/json"
+
+
+enum Server: String {
+    case apiKey = "182f1965b7b85d44b12945225e855bee"
+    case ts = "1"
+    case hash1 = "30465a13526b5a1e20215eafecaead1e"
+}
+
+enum HTTPMethods: String{
+   case get = "GET"
+    case post = "POST"
+    case content = "application/json"
 }
 
 enum Endpoints: String {
+    case baseURL1 = "https://gateway.marvel.com:443"
     case heroes = "/v1/public/characters"
-    case series = "/v1/public/characters/{characterId}/series"
+    case series = "/series"
+}
+
+enum OrderBy: String {
+    case formerModified = "-modified"
+    case recentModified = "modified"
+    case startYear = "startYear"
 }

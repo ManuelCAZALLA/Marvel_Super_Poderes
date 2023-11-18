@@ -25,36 +25,38 @@ final class ViewModelHeroes: ObservableObject {
     }
     
     func getHeroes() {
-        
         self.status = .initialSplash
         
-        URLSession.shared.dataTaskPublisher(for: Networking().getHeroes())
+        URLSession.shared.dataTaskPublisher(for: Networking().getHeroes(sortBy: .formerModified))
             .tryMap {
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
+                
                 return $0.data
             }
-            .decode(type: [HeroesMarvel].self, decoder: JSONDecoder())
+            .decode(type: Welcome.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
-                case .failure:
-                    self.status = .error(error: "No se han encontrado heroes")
-                    
+                case .failure(let error):
+                    print("Error: \(error)")
                 case .finished:
                     self.status = .heroes
                 }
             } receiveValue: { data in
-                self.heroes = data
+               
+                self.heroes = data.data.results
             }
-            .store(in: &suscriptor)
+          
+
+.store(in: &suscriptor)
     }
     // Quitar de aqui
     func getHeroesTesting() {
         self.status = .initialSplash
-        self.heroes = Networking().getHeroesFake()
+        //self.heroes = Networking().getHeroesFake()
         self.status = .heroes
     }
     // Domain - caso de uso: Real y testing REpository - Network: Real y testing y en NetWorkingTEst iria lo de abajo

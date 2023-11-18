@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "Marvel_App.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Marvel_App (1).png",
       "idiom" : "universal",
       "scale" : "3x"
     }
