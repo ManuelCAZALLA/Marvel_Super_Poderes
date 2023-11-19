@@ -18,7 +18,7 @@ final class SeriesViewModel: ObservableObject {
     init(heroe: HeroesMarvel, testing: Bool = false) {
         self.heroe = heroe
         if (testing) {
-            Networking().getHeroesFake()
+            getSeriesFake()
         }else {
             getSeries()
         }
@@ -27,7 +27,7 @@ final class SeriesViewModel: ObservableObject {
     func getSeries() {
         self.status = .none
         
-        URLSession.shared.dataTaskPublisher(for: Networking().getMarvelSeries(with: heroe.id, sortBy: .startYear))
+        URLSession.shared.dataTaskPublisher(for: BaseNetwork().getMarvelSeries(with: heroe.id, sortBy: .startYear))
             .tryMap {
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
@@ -53,6 +53,17 @@ final class SeriesViewModel: ObservableObject {
           
             }
         
-    
+    func getSeriesFake() -> [SeriesMarvel] {
+        
+        let serie1 = SeriesMarvel(id: 17765, title: "FREE COMIC BOOK DAY 2013 1 (2013)", description: "FreeCommic", modified: "2019-09-23T20:59:37-0400", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available", thumbnailExtension: "jpg"))
+        
+        let serie2 = SeriesMarvel(id: 3374, title: "Hulk (2008 - 2012)", description: "General Thunderbolt Ross spent years hunting the Hulk, but now he's become one himself! As the rampaging Red Hulk, Ross strives to reconcile the man he used to be with the monster he's becomes, smashing anything that moves along the way!", modified:"2020-09-04T09:03:42-0400", thumbnail: Thumbnail(path:"http://gateway.marvel.com/v1/public/series/3374", thumbnailExtension: "jpg"))
+        
+        let serie3 = SeriesMarvel(id: 374, title: "Hulk ", description: "La Serie", modified:"2020-09-04T09:03:42-0400", thumbnail: Thumbnail(path:"", thumbnailExtension: "jpg"))
+        
+        
+        return [serie1,serie2,serie3]
+        
+    }
     
 }

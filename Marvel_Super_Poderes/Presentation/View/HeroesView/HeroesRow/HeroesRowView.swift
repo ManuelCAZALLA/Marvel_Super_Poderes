@@ -18,7 +18,7 @@ struct HeroesRowView: View {
                             .frame(width: 300, height: 200)
                             .aspectRatio(contentMode: .fill)
                             .cornerRadius(20)
-                            .id(1)
+                            .id(0)
                     } placeholder: {
                         Image(systemName: "person")
                     }
@@ -27,6 +27,7 @@ struct HeroesRowView: View {
                         .font(.title)
                         .bold()
                         .foregroundColor(.white)
+                        .id(1)
                 }
                 
             }

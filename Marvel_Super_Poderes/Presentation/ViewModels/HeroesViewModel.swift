@@ -15,8 +15,10 @@ final class HeroesViewModel: ObservableObject {
     //TODO:  CASO DE USO
     
     var suscriptor = Set<AnyCancellable>()
-    // Hacer con protocolo
+    //var useCase: HeroesUseCaseProtocol
+    
     init(testing: Bool = false){
+       
         if (testing){
             getHeroesTesting()
         }else {
@@ -27,7 +29,7 @@ final class HeroesViewModel: ObservableObject {
     func getHeroes() {
         self.status = .loading
         
-        URLSession.shared.dataTaskPublisher(for: Networking().getHeroes(sortBy: .formerModified))
+        URLSession.shared.dataTaskPublisher(for: BaseNetwork().getHeroes(sortBy: .formerModified))
             .tryMap {
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
@@ -53,13 +55,27 @@ final class HeroesViewModel: ObservableObject {
 
 .store(in: &suscriptor)
     }
-    // Quitar de aqui
+    
     func getHeroesTesting() {
         self.status = .none
-        self.heroes = Networking().getHeroesFake()
-        self.status = .loading
+        self.heroes = getHeroesFake()
+        self.status = .loaded
     }
-    // Domain - caso de uso: Real y testing REpository - Network: Real y testing y en NetWorkingTEst iria lo de abajo
+    
+    func getHeroesFake() -> [HeroesMarvel] {
+        
+        let hero1 = HeroesMarvel(id: 1011495, name: "Marvelman", description: "No me conocen ni en mi casa", modified: "2022-05-03T11:41:04-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available", thumbnailExtension: "jpg"))
+        
+        let hero2 = HeroesMarvel(id: 1017857, name: "Peggy Carter (Captain Carter)", description: "Soy man, MarvelMan", modified: "2023-09-14T12:40:07-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available", thumbnailExtension: "jpg"))
+        
+        let hero3 = HeroesMarvel(id: 1011442, name: "Hit-Monkey", description: "El mono saltarín", modified: "2022-04-14T19:56:30-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: "jpg"))
+        
+        
+        return [hero1, hero2, hero3]
+        
+        
+    }
+   
     
    
 }

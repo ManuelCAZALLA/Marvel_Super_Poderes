@@ -17,7 +17,7 @@
 		3C0C69F22AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C69F12AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.swift */; };
 		3C0C69FC2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C69FB2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.swift */; };
 		3C0C69FE2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C69FD2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITestsLaunchTests.swift */; };
-		3C0C6A1B2AFD3F86005E8D24 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A1A2AFD3F86005E8D24 /* Networking.swift */; };
+		3C0C6A1B2AFD3F86005E8D24 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A1A2AFD3F86005E8D24 /* BaseNetwork.swift */; };
 		3C0C6A2C2AFEAB09005E8D24 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3C0C6A2B2AFEAB09005E8D24 /* Localizable.xcstrings */; };
 		3C0C6A302AFEB6EF005E8D24 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A2F2AFEB6EF005E8D24 /* RootViewModel.swift */; };
 		3C0C6A322AFF68CF005E8D24 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A312AFF68CF005E8D24 /* StatusModel.swift */; };
@@ -29,6 +29,10 @@
 		3C148CE32B06269D00576575 /* SeriesMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C148CE22B06269D00576575 /* SeriesMarvel.swift */; };
 		3C17CD752B03E83C00A6B3D1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD742B03E83C00A6B3D1 /* RootView.swift */; };
 		3C17CD772B03EAA700A6B3D1 /* InitialSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD762B03EAA700A6B3D1 /* InitialSplash.swift */; };
+		3CB64FC52B0A046A007444A8 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB64FC42B0A046A007444A8 /* ViewInspector */; };
+		3CB64FCF2B0A632A007444A8 /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64FCE2B0A632A007444A8 /* TestModels.swift */; };
+		3CB64FD12B0A646D007444A8 /* TestViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64FD02B0A646D007444A8 /* TestViewModels.swift */; };
+		3CB64FD32B0A650A007444A8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64FD22B0A650A007444A8 /* TestView.swift */; };
 		3CF2F2192B07D0FA0038A530 /* SeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2F2182B07D0FA0038A530 /* SeriesViewModel.swift */; };
 		3CF2F21C2B08C5D10038A530 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2F21B2B08C5D10038A530 /* SeriesRowView.swift */; };
 		3CFBAC5F2B04005C00C29EBB /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBAC5E2B04005C00C29EBB /* ErrorView.swift */; };
@@ -66,7 +70,7 @@
 		3C0C69F72AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Marvel_Super_PoderesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0C69FB2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_Super_PoderesUITests.swift; sourceTree = "<group>"; };
 		3C0C69FD2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_Super_PoderesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3C0C6A1A2AFD3F86005E8D24 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		3C0C6A1A2AFD3F86005E8D24 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		3C0C6A2B2AFEAB09005E8D24 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3C0C6A2F2AFEB6EF005E8D24 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		3C0C6A312AFF68CF005E8D24 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
@@ -78,6 +82,9 @@
 		3C148CE22B06269D00576575 /* SeriesMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesMarvel.swift; sourceTree = "<group>"; };
 		3C17CD742B03E83C00A6B3D1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3C17CD762B03EAA700A6B3D1 /* InitialSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSplash.swift; sourceTree = "<group>"; };
+		3CB64FCE2B0A632A007444A8 /* TestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
+		3CB64FD02B0A646D007444A8 /* TestViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModels.swift; sourceTree = "<group>"; };
+		3CB64FD22B0A650A007444A8 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		3CF2F2182B07D0FA0038A530 /* SeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewModel.swift; sourceTree = "<group>"; };
 		3CF2F21B2B08C5D10038A530 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
 		3CFBAC5E2B04005C00C29EBB /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -96,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB64FC52B0A046A007444A8 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +175,9 @@
 		3C0C69F02AFD2CE9005E8D24 /* Marvel_Super_PoderesTests */ = {
 			isa = PBXGroup;
 			children = (
+				3CB64FCD2B0A6258007444A8 /* View */,
+				3CB64FCC2B0A6246007444A8 /* ViewModels */,
+				3CB64FCB2B0A6238007444A8 /* Model */,
 				3C0C69F12AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.swift */,
 			);
 			path = Marvel_Super_PoderesTests;
@@ -184,7 +195,7 @@
 		3C0C6A0A2AFD2D06005E8D24 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3C0C6A132AFD2E0F005E8D24 /* Newtwork */,
+				3C0C6A132AFD2E0F005E8D24 /* Services */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -239,12 +250,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3C0C6A132AFD2E0F005E8D24 /* Newtwork */ = {
+		3C0C6A132AFD2E0F005E8D24 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3C0C6A1A2AFD3F86005E8D24 /* Networking.swift */,
+				3C0C6A1A2AFD3F86005E8D24 /* BaseNetwork.swift */,
 			);
-			path = Newtwork;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3C0C6A222AFEA87F005E8D24 /* Localizables */ = {
@@ -304,6 +315,30 @@
 			path = RootView;
 			sourceTree = "<group>";
 		};
+		3CB64FCB2B0A6238007444A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CB64FCE2B0A632A007444A8 /* TestModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CB64FCC2B0A6246007444A8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3CB64FD02B0A646D007444A8 /* TestViewModels.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3CB64FCD2B0A6258007444A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CB64FD22B0A650A007444A8 /* TestView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3CF2F21A2B08C5AF0038A530 /* SeriesRow */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +391,9 @@
 				3C0C69EF2AFD2CE9005E8D24 /* PBXTargetDependency */,
 			);
 			name = Marvel_Super_PoderesTests;
+			packageProductDependencies = (
+				3CB64FC42B0A046A007444A8 /* ViewInspector */,
+			);
 			productName = Marvel_Super_PoderesTests;
 			productReference = 3C0C69ED2AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -412,6 +450,7 @@
 			);
 			mainGroup = 3C0C69CF2AFD2CE6005E8D24;
 			packageReferences = (
+				3CB64FC32B0A046A007444A8 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = 3C0C69D92AFD2CE6005E8D24 /* Products */;
 			projectDirPath = "";
@@ -467,7 +506,7 @@
 				3C0C69E82AFD2CE8005E8D24 /* Marvel_Super_Poderes.xcdatamodeld in Sources */,
 				3CF2F21C2B08C5D10038A530 /* SeriesRowView.swift in Sources */,
 				3CF2F2192B07D0FA0038A530 /* SeriesViewModel.swift in Sources */,
-				3C0C6A1B2AFD3F86005E8D24 /* Networking.swift in Sources */,
+				3C0C6A1B2AFD3F86005E8D24 /* BaseNetwork.swift in Sources */,
 				3C0C6A322AFF68CF005E8D24 /* StatusModel.swift in Sources */,
 				3C0C69DE2AFD2CE6005E8D24 /* ContentView.swift in Sources */,
 				3CFBAC5F2B04005C00C29EBB /* ErrorView.swift in Sources */,
@@ -483,7 +522,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB64FD32B0A650A007444A8 /* TestView.swift in Sources */,
+				3CB64FD12B0A646D007444A8 /* TestViewModels.swift in Sources */,
 				3C0C69F22AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.swift in Sources */,
+				3CB64FCF2B0A632A007444A8 /* TestModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +847,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3CB64FC32B0A046A007444A8 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3CB64FC42B0A046A007444A8 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CB64FC32B0A046A007444A8 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3C0C69E62AFD2CE8005E8D24 /* Marvel_Super_Poderes.xcdatamodeld */ = {

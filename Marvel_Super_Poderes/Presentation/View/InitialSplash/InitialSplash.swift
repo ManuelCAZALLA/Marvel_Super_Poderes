@@ -16,6 +16,7 @@ struct InitialSplash: View {
             Image(.fondoApp)
                 .resizable()
                 .opacity(1)
+                .id(0)
 
             Image(decorative: "")
                 .resizable()
@@ -29,7 +30,7 @@ struct InitialSplash: View {
                     .opacity(0.8)
                     .padding(.top, 20)
                     .padding([.leading, .trailing], 50)
-                    .id(0)
+                    .id(1)
 
                 Spacer()
 
@@ -43,14 +44,14 @@ struct InitialSplash: View {
                             self.rotation = 360.0
                         }
                     }
-                    .id(1)
+                    .id(2)
 
                 Spacer()
 
                 Text("Cargando...")
                     .foregroundColor(.white)
                     .font(.title)
-                    .id(2)
+                    .id(3)
 
                 Spacer()
 
@@ -60,7 +61,7 @@ struct InitialSplash: View {
                     .opacity(0.8)
                     .padding(.bottom, 20)
                     .padding([.leading, .trailing], 70)
-                    .id(3)
+                    .id(4)
             }
         }
         .ignoresSafeArea()

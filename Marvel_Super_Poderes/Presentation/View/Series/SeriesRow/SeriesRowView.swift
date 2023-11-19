@@ -17,6 +17,7 @@ struct SeriesRowView: View {
                 .padding()
                 .bold()
                 .opacity(0.7)
+                .id(0)
             
             AsyncImage(url: URL(string: "\(serie.urlSeries)")) { Image in
                 Image
