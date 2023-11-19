@@ -9,30 +9,32 @@ import SwiftUI
 
 struct HeroesView: View {
     @StateObject var ViewModel: HeroesViewModel
+    @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
         NavigationStack {
             List{
                 if let heroes = ViewModel.heroes {
                     ForEach(heroes){ heroe in
-                            NavigationLink {
-                                SeriesView(viewModelSerie: SeriesViewModel(heroe: heroe), heroe: heroe)
-                            } label: {
-                                HeroesRowView(heroes: heroe)
-                                    .frame(height: 200)
-                                
-                            }
+                        NavigationLink {
+                            SeriesView(viewModelSerie: SeriesViewModel(heroe: heroe), heroe: heroe)
+                        } label: {
+                            HeroesRowView(heroes: heroe)
+                                .frame(height: 200)
+                            
                         }
                     }
                 }
             }
         }
     }
+}
 
+    
 #Preview {
-    HeroesView(ViewModel: HeroesViewModel(testing: true))
+        HeroesView(ViewModel: HeroesViewModel(testing: true))
         
     }
     
-
-
+    
+    

@@ -43,7 +43,7 @@ final class SeriesViewModel: ObservableObject {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .finished:
-                    self.status = .loadingSeries
+                    self.status = .loading
                 }
             } receiveValue: { data in
                

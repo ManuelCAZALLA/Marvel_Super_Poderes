@@ -11,6 +11,5 @@ enum Status {
     case none
     case loaded
     case loading
-    case loadingSeries
     case error(error: String)
 }

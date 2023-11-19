@@ -28,7 +28,7 @@
 		3C13F6ED2B04E5A1001F95F3 /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F6EC2B04E5A1001F95F3 /* HeroesRowView.swift */; };
 		3C148CE32B06269D00576575 /* SeriesMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C148CE22B06269D00576575 /* SeriesMarvel.swift */; };
 		3C17CD752B03E83C00A6B3D1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD742B03E83C00A6B3D1 /* RootView.swift */; };
-		3C17CD772B03EAA700A6B3D1 /* initialSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD762B03EAA700A6B3D1 /* initialSplash.swift */; };
+		3C17CD772B03EAA700A6B3D1 /* InitialSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD762B03EAA700A6B3D1 /* InitialSplash.swift */; };
 		3CF2F2192B07D0FA0038A530 /* SeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2F2182B07D0FA0038A530 /* SeriesViewModel.swift */; };
 		3CF2F21C2B08C5D10038A530 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2F21B2B08C5D10038A530 /* SeriesRowView.swift */; };
 		3CFBAC5F2B04005C00C29EBB /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBAC5E2B04005C00C29EBB /* ErrorView.swift */; };
@@ -77,7 +77,7 @@
 		3C13F6EC2B04E5A1001F95F3 /* HeroesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRowView.swift; sourceTree = "<group>"; };
 		3C148CE22B06269D00576575 /* SeriesMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesMarvel.swift; sourceTree = "<group>"; };
 		3C17CD742B03E83C00A6B3D1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		3C17CD762B03EAA700A6B3D1 /* initialSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialSplash.swift; sourceTree = "<group>"; };
+		3C17CD762B03EAA700A6B3D1 /* InitialSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSplash.swift; sourceTree = "<group>"; };
 		3CF2F2182B07D0FA0038A530 /* SeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewModel.swift; sourceTree = "<group>"; };
 		3CF2F21B2B08C5D10038A530 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
 		3CFBAC5E2B04005C00C29EBB /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -184,7 +184,6 @@
 		3C0C6A0A2AFD2D06005E8D24 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3C0C6A162AFD2E4A005E8D24 /* Local */,
 				3C0C6A132AFD2E0F005E8D24 /* Newtwork */,
 			);
 			path = Data;
@@ -193,7 +192,6 @@
 		3C0C6A0B2AFD2D5D005E8D24 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				3C0C6A122AFD2DEB005E8D24 /* UseCases */,
 				3C0C6A112AFD2DD1005E8D24 /* Models */,
 			);
 			path = Domain;
@@ -241,34 +239,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3C0C6A122AFD2DEB005E8D24 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		3C0C6A132AFD2E0F005E8D24 /* Newtwork */ = {
 			isa = PBXGroup;
 			children = (
 				3C0C6A1A2AFD3F86005E8D24 /* Networking.swift */,
 			);
 			path = Newtwork;
-			sourceTree = "<group>";
-		};
-		3C0C6A142AFD2E2C005E8D24 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		3C0C6A162AFD2E4A005E8D24 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				3C0C6A142AFD2E2C005E8D24 /* CoreData */,
-			);
-			path = Local;
 			sourceTree = "<group>";
 		};
 		3C0C6A222AFEA87F005E8D24 /* Localizables */ = {
@@ -315,7 +291,7 @@
 		3C17CD782B03EAB200A6B3D1 /* InitialSplash */ = {
 			isa = PBXGroup;
 			children = (
-				3C17CD762B03EAA700A6B3D1 /* initialSplash.swift */,
+				3C17CD762B03EAA700A6B3D1 /* InitialSplash.swift */,
 			);
 			path = InitialSplash;
 			sourceTree = "<group>";
@@ -482,7 +458,7 @@
 			files = (
 				3C0B1F162B012C6A00EFEA9A /* HeroesView.swift in Sources */,
 				3C13F6EA2B04A3B1001F95F3 /* SeriesView.swift in Sources */,
-				3C17CD772B03EAA700A6B3D1 /* initialSplash.swift in Sources */,
+				3C17CD772B03EAA700A6B3D1 /* InitialSplash.swift in Sources */,
 				3C148CE32B06269D00576575 /* SeriesMarvel.swift in Sources */,
 				3CFBAC612B040AF100C29EBB /* HeroesViewModel.swift in Sources */,
 				3C0C69E52AFD2CE8005E8D24 /* Persistence.swift in Sources */,

@@ -25,7 +25,7 @@ final class HeroesViewModel: ObservableObject {
     }
     
     func getHeroes() {
-        self.status = .none
+        self.status = .loading
         
         URLSession.shared.dataTaskPublisher(for: Networking().getHeroes(sortBy: .formerModified))
             .tryMap {
@@ -43,7 +43,7 @@ final class HeroesViewModel: ObservableObject {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .finished:
-                    self.status = .loading
+                    self.status = .loaded
                 }
             } receiveValue: { data in
                

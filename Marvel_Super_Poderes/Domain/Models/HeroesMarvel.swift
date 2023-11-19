@@ -54,6 +54,7 @@ struct HeroesMarvel: Codable, Identifiable{
     enum Extension: String, Codable {
         case gif = "gif"
         case jpg = "jpg"
+        case fill = "fill"
     }
     
   

@@ -11,28 +11,27 @@ struct RootView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
-        
-        switch rootViewModel.status {
-        case .none:
-            withAnimation {
-                initialSplash()
-            }
-        case .loading:
-            withAnimation {
-                HeroesView(ViewModel: HeroesViewModel())
+        NavigationView{
+            switch rootViewModel.status {
+            case .none:
+                withAnimation {
+                    InitialSplash()
+                }
+            case .loaded:
+                withAnimation {
+                    HeroesView(ViewModel: HeroesViewModel())
+                    
+                }
+            case .loading:
+                withAnimation {
+                    SecondSplashView()
+                }
                 
-            }
-        case .loaded:
-            withAnimation {
-                Text("Second Splash")
-            }
-        case .loadingSeries:
-            withAnimation{
-               Text("Series")            }
-        case .error(error: let errorString):
-            withAnimation {
-                ErrorView(error: errorString)
-            
+            case .error(error: let errorString):
+                withAnimation {
+                    ErrorView(error: errorString)
+                    
+                }
             }
         }
     }
