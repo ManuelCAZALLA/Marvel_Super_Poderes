@@ -25,16 +25,8 @@ struct SeriesView: View {
         }
     }
 
-    
-     
-     /*#Preview {
-      DetailView(series: SeriesMarvel(
-      id: 1945,
-      title: "Avengers: The Initiative (2007 - 2010)",
-      description: "",
-      thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/514a2ed3302f5", thumbnailExtension: "jpg")))
-      }
-      }
-      */
+#Preview {
+    SeriesView(viewModelSerie: SeriesViewModel(heroe: HeroesMarvel(id: 1011442, name: "Hit-Monkey", description: "El mono saltarín", modified: "2022-04-14T19:56:30-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: "jpg")), testing: true))
+}
      
 

@@ -18,6 +18,7 @@ struct HeroesRowView: View {
                             .frame(width: 300, height: 200)
                             .aspectRatio(contentMode: .fill)
                             .cornerRadius(20)
+                            .id(1)
                     } placeholder: {
                         Image(systemName: "person")
                     }
@@ -31,17 +32,9 @@ struct HeroesRowView: View {
             }
         }
 
-/*#Preview {
+#Preview {
     HeroesRowView(
-        heroes: HeroesMarvel(
-            id: 1011334,
-            name: "3-D Man",
-            description: "",
-            thumbnail: Thumbnail(
-                path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784",
-                thumbnailExtension: "jpg"
-            )
-        )
-        )
-    }*/
+        heroes: HeroesMarvel(id: 1011442, name: "Hit-Monkey", description: "El mono saltarín", modified: "2022-04-14T19:56:30-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: "jpg")))
+           
+    }
 

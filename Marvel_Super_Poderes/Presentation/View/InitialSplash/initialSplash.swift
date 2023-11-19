@@ -9,8 +9,8 @@ import SwiftUI
 import Combine
 
 struct initialSplash: View {
-    @State private var isTimerActive = false
     @EnvironmentObject var rootViewModel: RootViewModel
+    @State private var rotation: Double = 0.0
     
     var body: some View {
         
@@ -37,14 +37,20 @@ struct initialSplash: View {
                     .resizable()
                     .foregroundColor(.blue)
                     .frame(width: 100, height: 100)
+                    .rotationEffect(.degrees(rotation))
+                    .onAppear {
+                        withAnimation(Animation.linear(duration: 1.0).repeatForever(autoreverses: false)) {
+                            self.rotation = 360.0
+                        }
+                    }
+                Spacer()
                 
                 Text("Cargando...")
                     .foregroundColor(.white)
                     .font(.title)
-                
+               
                 Spacer()
-                
-                
+               
                 Image(.keepcoding1)
                     .resizable()
                     .scaledToFit()

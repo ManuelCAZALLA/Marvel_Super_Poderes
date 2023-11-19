@@ -11,7 +11,7 @@ import Combine
 final class RootViewModel: ObservableObject {
     private var suscriptor: Set<AnyCancellable> = []
     
-    @Published var status = Status.initialSplash
+    @Published var status = Status.none
     
     
 }

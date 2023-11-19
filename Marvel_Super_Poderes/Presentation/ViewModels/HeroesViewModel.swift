@@ -8,9 +8,9 @@
 import Foundation
 import Combine
 
-final class ViewModelHeroes: ObservableObject {
+final class HeroesViewModel: ObservableObject {
     @Published var heroes: [HeroesMarvel]?
-    @Published var status = Status.initialSplash
+    @Published var status = Status.none
     
     //TODO:  CASO DE USO
     
@@ -25,7 +25,7 @@ final class ViewModelHeroes: ObservableObject {
     }
     
     func getHeroes() {
-        self.status = .initialSplash
+        self.status = .none
         
         URLSession.shared.dataTaskPublisher(for: Networking().getHeroes(sortBy: .formerModified))
             .tryMap {
@@ -43,7 +43,7 @@ final class ViewModelHeroes: ObservableObject {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .finished:
-                    self.status = .heroes
+                    self.status = .loading
                 }
             } receiveValue: { data in
                
@@ -55,9 +55,9 @@ final class ViewModelHeroes: ObservableObject {
     }
     // Quitar de aqui
     func getHeroesTesting() {
-        self.status = .initialSplash
-        //self.heroes = Networking().getHeroesFake()
-        self.status = .heroes
+        self.status = .none
+        self.heroes = Networking().getHeroesFake()
+        self.status = .loading
     }
     // Domain - caso de uso: Real y testing REpository - Network: Real y testing y en NetWorkingTEst iria lo de abajo
     

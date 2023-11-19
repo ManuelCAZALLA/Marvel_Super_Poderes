@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HeroesView: View {
-    @StateObject var ViewModel: ViewModelHeroes
+    @StateObject var ViewModel: HeroesViewModel
     
     var body: some View {
         NavigationStack {
@@ -29,11 +29,8 @@ struct HeroesView: View {
         }
     }
 
-                  
-
-          
 #Preview {
-    HeroesView(ViewModel: ViewModelHeroes(testing: false))
+    HeroesView(ViewModel: HeroesViewModel(testing: true))
         
     }
     

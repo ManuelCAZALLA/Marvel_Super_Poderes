@@ -13,23 +13,22 @@ struct RootView: View {
     var body: some View {
         
         switch rootViewModel.status {
-        case .initialSplash:
+        case .none:
             withAnimation {
                 initialSplash()
             }
-        case .heroes:
+        case .loading:
             withAnimation {
-                HeroesView(ViewModel: ViewModelHeroes())
+                HeroesView(ViewModel: HeroesViewModel())
                 
             }
-        case .secondSplash:
+        case .loaded:
             withAnimation {
                 Text("Second Splash")
             }
-        case .series:
+        case .loadingSeries:
             withAnimation{
-                Text("Series")
-            }
+               Text("Series")            }
         case .error(error: let errorString):
             withAnimation {
                 ErrorView(error: errorString)

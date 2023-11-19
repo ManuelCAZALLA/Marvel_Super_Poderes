@@ -25,7 +25,7 @@ struct SeriesRowView: View {
                     .cornerRadius(20)
                     //.opacity(0.7)
                     .padding()
-                    .id(0)
+                    .id(1)
                 
             } placeholder: {
                 Image(systemName: "photo")
@@ -53,8 +53,7 @@ struct SeriesRowView: View {
     }
     
 }
-/*#Preview {
- SeriesRowView(serie: SeriesMarvel(id: 145896, title: "Prueba Test Serie", description: "", resourceURI: "", urls: [], startYear: 3, endYear: 5, rating: "", type: "", modified: "", thumbnail: Thumbnail(path: "", thumbnailExtension: "jpg"), creators: Creators(available: 5, collectionURI: "", items: [], returned: 9), characters: Characters(available: 2, collectionURI: "", items: [], returned: 5), stories: Stories(available: 1, collectionURI: "", items: [], returned: 3), comics: Characters(available: 2, collectionURI: "", items: [], returned: 4), events: Characters(available: 5, collectionURI: "", items: [], returned: 9)))
- 
+#Preview {
+ SeriesRowView(serie: SeriesMarvel(id: 3374, title: "Hulk (2008 - 2012)", description: "General Thunderbolt Ross spent years hunting the Hulk, but now he's become one himself! As the rampaging Red Hulk, Ross strives to reconcile the man he used to be with the monster he's becomes, smashing anything that moves along the way!", modified:"2020-09-04T09:03:42-0400", thumbnail: Thumbnail(path:"http://gateway.marvel.com/v1/public/series/3374", thumbnailExtension: "jpg")))
  }
- */
+ 

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 final class SeriesViewModel: ObservableObject {
-    @Published var status = Status.initialSplash
+    @Published var status = Status.none
     @Published var heroe: HeroesMarvel
     @Published var series: [SeriesMarvel] = []
     
@@ -18,14 +18,14 @@ final class SeriesViewModel: ObservableObject {
     init(heroe: HeroesMarvel, testing: Bool = false) {
         self.heroe = heroe
         if (testing) {
-            getSeriesFake()
+            Networking().getHeroesFake()
         }else {
             getSeries()
         }
     }
     
     func getSeries() {
-        self.status = .secondSplash
+        self.status = .none
         
         URLSession.shared.dataTaskPublisher(for: Networking().getMarvelSeries(with: heroe.id, sortBy: .startYear))
             .tryMap {
@@ -43,7 +43,7 @@ final class SeriesViewModel: ObservableObject {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .finished:
-                    self.status = .series
+                    self.status = .loadingSeries
                 }
             } receiveValue: { data in
                

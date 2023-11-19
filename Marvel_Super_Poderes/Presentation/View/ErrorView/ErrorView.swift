@@ -33,7 +33,7 @@ struct ErrorView: View {
             Spacer()
             
             Button {
-                rootViewModel.status = .initialSplash
+                rootViewModel.status = .none
             } label: {
                 Text("Volver a cargar")
                     .font(.title)
