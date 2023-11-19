@@ -8,33 +8,49 @@
 import SwiftUI
 
 struct HeroesView: View {
-    @StateObject var ViewModel: HeroesViewModel
+    @StateObject var viewModel: HeroesViewModel
     @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
-        NavigationStack {
-            List{
-                if let heroes = ViewModel.heroes {
-                    ForEach(heroes){ heroe in
-                        NavigationLink {
-                            SeriesView(viewModelSerie: SeriesViewModel(heroe: heroe), heroe: heroe)
-                        } label: {
+        NavigationView {
+            List {
+                if let heroes = viewModel.heroes {
+                    ForEach(heroes) { heroe in
+                        NavigationLink(
+                            destination: SeriesView(viewModelSerie: SeriesViewModel(heroe: heroe), heroe: heroe)
+                        ) {
                             HeroesRowView(heroes: heroe)
                                 .frame(height: 200)
+                               
+                        }
+                        .onTapGesture {
+                            rootViewModel.selectedHero = heroe
+                            rootViewModel.status = .loading
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                rootViewModel.status = .loadedSeries
+                                
+                            }
+                            
                             
                         }
                     }
+                    
                 }
+                
             }
+            
+           
         }
+        
     }
 }
 
-    
-#Preview {
-        HeroesView(ViewModel: HeroesViewModel(testing: true))
         
-    }
-    
-    
-    
+#Preview {
+HeroesView(viewModel: HeroesViewModel(testing: true))
+            
+        }
+        
+        
+        

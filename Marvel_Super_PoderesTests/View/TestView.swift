@@ -51,6 +51,7 @@ final class TestView: XCTestCase {
     
     func testSeriesRowView() throws {
         let view = SeriesRowView(serie: SeriesMarvel(id: 1, title: "Serie de Marvel", description: "Soy una serie", modified: "", thumbnail: Thumbnail(path: "", thumbnailExtension: "")))
+            .environmentObject(RootViewModel())
         
         XCTAssertNotNil(view)
         
@@ -63,13 +64,38 @@ final class TestView: XCTestCase {
         }
     func testErrorView() throws {
         let view = ErrorView(error: "Pantalla de error")
+            .environmentObject(RootViewModel())
         
         XCTAssertNotNil(view)
         
-       
+        let image =  try view.inspect().find(viewWithId: 0)
+        XCTAssertNotNil(image)
         
-       
+        let text = try view.inspect().find(viewWithId: 2)
+        XCTAssertNotNil(text)
         
+        let contentText = try text.text().string()
+        XCTAssertEqual(contentText, "Volver a cargar")
+        }
+    
+    func testSecondSplashView() throws {
+        let view = SecondSplashView()
+            .environmentObject(RootViewModel())
+        
+        XCTAssertNotNil(view)
+        
+        let text = try view.inspect().find(viewWithId: 2)
+        XCTAssertNotNil(text)
+        
+        let contentText = try text.text().string()
+        XCTAssertEqual(contentText, "Cargando Series...")
+        
+        let image =  try view.inspect().find(viewWithId: 0)
+        XCTAssertNotNil(image)
+        
+        let image2 =  try view.inspect().find(viewWithId: 3)
+        XCTAssertNotNil(image2)
+       
     }
     
 

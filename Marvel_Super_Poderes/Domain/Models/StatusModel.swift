@@ -10,6 +10,7 @@ import Foundation
 enum Status {
     case none
     case loaded
+    case loadedSeries
     case loading
     case error(error: String)
 }

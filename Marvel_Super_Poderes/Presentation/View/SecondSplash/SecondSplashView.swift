@@ -18,6 +18,7 @@ struct SecondSplashView: View {
             Image(.secondSplash1)
                 .resizable()
                 .opacity(1)
+                .id(0)
             
             Image(decorative: "")
                 .resizable()
@@ -31,6 +32,7 @@ struct SecondSplashView: View {
                     .opacity(0.8)
                     .padding(.top, 20)
                     .padding([.leading, .trailing], 50)
+                    .id(1)
                 Spacer()
                 
                 Image(systemName: "circle.dashed")
@@ -48,6 +50,7 @@ struct SecondSplashView: View {
                 Text("Cargando Series...")
                     .foregroundColor(.white)
                     .font(.title)
+                    .id(2)
                 
                 Spacer()
                 
@@ -57,6 +60,7 @@ struct SecondSplashView: View {
                     .scaledToFit()
                     .padding(.bottom, 20)
                     .padding([.leading, .trailing], 70)
+                    .id(3)
             }
             
         }

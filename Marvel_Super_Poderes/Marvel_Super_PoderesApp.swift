@@ -20,6 +20,7 @@ struct Marvel_Super_PoderesApp: App {
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                        rootViewModel.status = .loaded
+                            
                         
                     }
                 }
