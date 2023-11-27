@@ -20,26 +20,15 @@ struct RootView: View {
             case .loaded:
                 withAnimation {
                     HeroesView(viewModel: HeroesViewModel())
-                
+                    
                 }
                 
-            case .loadedSeries:
-                if let selectedHero = rootViewModel.selectedHero {
-                    SeriesView(viewModelSerie: SeriesViewModel(heroe: selectedHero), heroe: selectedHero)
-                } else {
-                   
-                    Text("No hay héroe seleccionado")
-                }
-
-                
-            case .loading:
+                case .loading:
                 withAnimation {
                     SecondSplashView()
                 }
                 
-             
-                
-            case .error(error: let errorString):
+                case .error(error: let errorString):
                 withAnimation {
                     ErrorView(error: errorString)
                     

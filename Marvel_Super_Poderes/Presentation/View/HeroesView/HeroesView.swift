@@ -28,7 +28,7 @@ struct HeroesView: View {
                             rootViewModel.status = .loading
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                                rootViewModel.status = .loadedSeries
+                                rootViewModel.status = .loading
                                 
                             }
                             

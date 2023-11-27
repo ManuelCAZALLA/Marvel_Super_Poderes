@@ -64,9 +64,9 @@ final class HeroesViewModel: ObservableObject {
     
     func getHeroesFake() -> [HeroesMarvel] {
         
-        let hero1 = HeroesMarvel(id: 1011495, name: "Marvelman", description: "No me conocen ni en mi casa", modified: "2022-05-03T11:41:04-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available", thumbnailExtension: "jpg"))
+        let hero1 = HeroesMarvel(id: 1011334, name: "3-D Man", description: "No me conocen ni en mi casa", modified: "2022-05-03T11:41:04-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: "jpg"))
         
-        let hero2 = HeroesMarvel(id: 1017857, name: "Peggy Carter (Captain Carter)", description: "Soy man, MarvelMan", modified: "2023-09-14T12:40:07-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available", thumbnailExtension: "jpg"))
+        let hero2 = HeroesMarvel(id: 1017857, name: "A-Bomb (HAS)", description: "Soy man, MarvelMan", modified: "2023-09-14T12:40:07-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16", thumbnailExtension: "jpg"))
         
         let hero3 = HeroesMarvel(id: 1011442, name: "Hit-Monkey", description: "El mono saltarín", modified: "2022-04-14T19:56:30-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: "jpg"))
         
