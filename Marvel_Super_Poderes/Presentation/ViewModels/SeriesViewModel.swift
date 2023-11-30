@@ -11,7 +11,7 @@ import Combine
 final class SeriesViewModel: ObservableObject {
     @Published var status = Status.none
     @Published var heroe: HeroesMarvel
-    @Published var series: [SeriesMarvel] = []
+    @Published var series: [SeriesMarvel]?
     
     var suscriptor = Set<AnyCancellable>()
     

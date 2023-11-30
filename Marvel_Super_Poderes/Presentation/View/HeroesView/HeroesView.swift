@@ -21,36 +21,23 @@ struct HeroesView: View {
                         ) {
                             HeroesRowView(heroes: heroe)
                                 .frame(height: 200)
-                               
-                        }
-                        .onTapGesture {
-                            rootViewModel.selectedHero = heroe
-                            rootViewModel.status = .loading
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                                rootViewModel.status = .loading
-                                
-                            }
-                            
                             
                         }
+                      
                     }
                     
                 }
                 
             }
-            
-           
         }
-        
     }
 }
 
-        
+
 #Preview {
-HeroesView(viewModel: HeroesViewModel(testing: true))
-            
-        }
-        
-        
-        
+    HeroesView(viewModel: HeroesViewModel(testing: true))
+    
+}
+
+
+

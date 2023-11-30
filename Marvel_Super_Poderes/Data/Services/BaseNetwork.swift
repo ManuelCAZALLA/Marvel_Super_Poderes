@@ -31,6 +31,7 @@ struct BaseNetwork {
         let urlString = "https://gateway.marvel.com:443/v1/public/characters/\(heroId)/series?ts=1&apikey=182f1965b7b85d44b12945225e855bee&hash=30465a13526b5a1e20215eafecaead1e"
         
         /*"\(Endpoints.baseURL1.rawValue)\(Endpoints.heroes.rawValue)/\(heroId)\(Endpoints.series.rawValue)\(auth)\(sortBy)" // probar*/
+        print (urlString)
                 
         let url = URL(string: urlString)
                 
