@@ -25,7 +25,7 @@ final class SeriesViewModel: ObservableObject {
     }
     
     func getSeries() {
-        self.status = .none
+        self.status = .loading
         
         URLSession.shared.dataTaskPublisher(for: BaseNetwork().getMarvelSeries(with: heroe.id, sortBy: .startYear))
             .tryMap {
@@ -43,7 +43,7 @@ final class SeriesViewModel: ObservableObject {
                 case .failure(let error):
                     print("Error: \(error)")
                 case .finished:
-                    self.status = .loading
+                    self.status = .loaded
                 }
             } receiveValue: { data in
                

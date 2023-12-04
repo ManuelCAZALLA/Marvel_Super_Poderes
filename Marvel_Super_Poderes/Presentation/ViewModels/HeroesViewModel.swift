@@ -12,10 +12,9 @@ final class HeroesViewModel: ObservableObject {
     @Published var heroes: [HeroesMarvel]?
     @Published var status = Status.none
     
-    //TODO:  CASO DE USO
+ 
     
     var suscriptor = Set<AnyCancellable>()
-    //var useCase: HeroesUseCaseProtocol
     
     init(testing: Bool = false){
        
