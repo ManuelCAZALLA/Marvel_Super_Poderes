@@ -12,8 +12,6 @@ final class HeroesViewModel: ObservableObject {
     @Published var heroes: [HeroesMarvel]?
     @Published var status = Status.none
     
- 
-    
     var suscriptor = Set<AnyCancellable>()
     
     init(testing: Bool = false){
@@ -28,7 +26,7 @@ final class HeroesViewModel: ObservableObject {
     func getHeroes() {
         self.status = .loading
         
-        URLSession.shared.dataTaskPublisher(for: BaseNetwork().getHeroes(sortBy: .formerModified))
+        URLSession.shared.dataTaskPublisher(for: BaseNetwork().getHeroes(sortBy: .recentModified))
             .tryMap {
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {

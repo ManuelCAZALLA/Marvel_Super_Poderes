@@ -22,19 +22,24 @@ struct HeroesRowView: View {
             } placeholder: {
                 Image(systemName: "person")
             }
-           
-            Text(heroes.name)
-                .font(.title)
-                .bold()
-                .foregroundColor(.white)
-                .id(1)
-         
+            
+            
+            
+            
+            .overlay(
+                VStack {
+                    Spacer()
+                    Text(heroes.name)
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding()
+                }
+            )
         }
-        .navigationTitle("Heroes")
-        
     }
-    
 }
+
 
 #Preview {
     HeroesRowView(
