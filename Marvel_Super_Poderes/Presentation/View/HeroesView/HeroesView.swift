@@ -12,31 +12,28 @@ struct HeroesView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
-       ZStack {
-                NavigationView {
-                    List {
-                        
-                        if let heroes = viewModel.heroes {
-                            ForEach(heroes) { heroe in
-                                NavigationLink(
-                                    destination: SeriesView(viewModelSerie: SeriesViewModel(heroe: heroe), heroe: heroe)
-                                ) {
-                                    HeroesRowView(heroes: heroe)
-                                        .frame(height: 200)
-                                       
-                                }
+        ZStack {
+            NavigationView {
+                List {
+                    
+                    if let heroes = viewModel.heroes {
+                        ForEach(heroes) { heroe in
+                            NavigationLink(
+                                destination: SeriesView(viewModelSerie: SeriesViewModel(heroe: heroe), heroe: heroe)
+                            ) {
+                                HeroesRowView(heroes: heroe)
+                                    .frame(height: 200)
+                                
                             }
                         }
                     }
-                    
                 }
+                
             }
         }
     }
+}
 
-            
-            
-        
 #Preview {
     HeroesView(viewModel: HeroesViewModel(testing: true))
     

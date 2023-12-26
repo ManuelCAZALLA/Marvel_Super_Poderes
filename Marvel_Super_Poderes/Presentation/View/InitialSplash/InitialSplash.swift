@@ -10,19 +10,19 @@ import SwiftUI
 struct InitialSplash: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     @State private var rotation: Double = 0.0
-   
-      var body: some View {
+    
+    var body: some View {
         ZStack {
             Image(.fondoApp)
                 .resizable()
                 .opacity(1)
                 .id(0)
-
+            
             Image(decorative: "")
                 .resizable()
                 .background(Color.black)
                 .opacity(0.2)
-
+            
             VStack {
                 Image(.marvel)
                     .resizable()
@@ -31,9 +31,9 @@ struct InitialSplash: View {
                     .padding(.top, 20)
                     .padding([.leading, .trailing], 50)
                     .id(1)
-
+                
                 Spacer()
-
+                
                 Image(systemName: "circle.dashed")
                     .resizable()
                     .foregroundColor(.blue)
@@ -45,16 +45,16 @@ struct InitialSplash: View {
                         }
                     }
                     .id(2)
-
+                
                 Spacer()
-
+                
                 Text("Cargando...")
                     .foregroundColor(.white)
                     .font(.title)
                     .id(3)
-
+                
                 Spacer()
-
+                
                 Image(.keepcoding1)
                     .resizable()
                     .scaledToFit()
@@ -65,14 +65,14 @@ struct InitialSplash: View {
             }
         }
         .ignoresSafeArea()
-       
+        
         
     }
 }
 
 
 
-    
+
 #Preview {
     InitialSplash()
 }

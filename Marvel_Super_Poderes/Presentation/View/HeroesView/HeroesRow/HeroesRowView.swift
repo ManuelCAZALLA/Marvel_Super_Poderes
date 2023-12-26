@@ -11,7 +11,7 @@ struct HeroesRowView: View {
     var heroes: HeroesMarvel
     
     var body: some View {
-        ZStack {
+        VStack {
             AsyncImage(url: URL(string: heroes.urlImage)) { image in
                 image
                     .resizable()
@@ -22,10 +22,6 @@ struct HeroesRowView: View {
             } placeholder: {
                 Image(systemName: "person")
             }
-            
-            
-            
-            
             .overlay(
                 VStack {
                     Spacer()
