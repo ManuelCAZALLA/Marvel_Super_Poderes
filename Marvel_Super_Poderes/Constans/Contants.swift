@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 enum Server: String {
     case apiKey = "182f1965b7b85d44b12945225e855bee"
     case ts = "1"
