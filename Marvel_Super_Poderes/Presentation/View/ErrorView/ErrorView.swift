@@ -15,7 +15,6 @@ struct ErrorView: View {
     init(error: String) {
         self.textError = error
     }
-
     
     var body: some View {
         VStack {
@@ -46,7 +45,7 @@ struct ErrorView: View {
                     .shadow(radius: 10, x: 20, y: 20)
                     .id(2)
             }
-
+            
         }
     }
 }

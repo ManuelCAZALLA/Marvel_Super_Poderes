@@ -15,7 +15,6 @@ struct HeroesView: View {
         ZStack {
             NavigationView {
                 List {
-                    
                     if let heroes = viewModel.heroes {
                         ForEach(heroes) { heroe in
                             NavigationLink(
@@ -23,17 +22,15 @@ struct HeroesView: View {
                             ) {
                                 HeroesRowView(heroes: heroe)
                                     .frame(height: 200)
-                                
                             }
                         }
                     }
                 }
-                
             }
         }
     }
 }
-
+            
 #Preview {
     HeroesView(viewModel: HeroesViewModel(testing: true))
     

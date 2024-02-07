@@ -33,9 +33,9 @@ struct HeroesRowView: View {
                 }
             )
         }
+        
     }
 }
-
 
 #Preview {
     HeroesRowView(

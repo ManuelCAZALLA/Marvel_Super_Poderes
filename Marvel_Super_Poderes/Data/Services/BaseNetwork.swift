@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 struct BaseNetwork {
-    
     func getHeroes(sortBy orderMethod: OrderBy) -> URLRequest{
         let auth = "?ts=\(Server.ts.rawValue)&apikey=\(Server.apiKey.rawValue)&hash=\(Server.hash1.rawValue)"
         let sortBy = "&orderBy=\(orderMethod.rawValue)"
@@ -26,8 +25,8 @@ struct BaseNetwork {
     
     func getMarvelSeries(with heroId: Int,sortBy orderMethod: OrderBy) -> URLRequest{
         
-        let auth = "?ts=\(Server.ts)&apikey=\(Server.apiKey)&hash=\(Server.hash1)"
-        let sortBy = "&orderBy=\(orderMethod.rawValue)"
+        //let auth = "?ts=\(Server.ts)&apikey=\(Server.apiKey)&hash=\(Server.hash1)"
+        //let sortBy = "&orderBy=\(orderMethod.rawValue)"
         let urlString = "https://gateway.marvel.com:443/v1/public/characters/\(heroId)/series?ts=1&apikey=182f1965b7b85d44b12945225e855bee&hash=30465a13526b5a1e20215eafecaead1e"
         
         /*"\(Endpoints.baseURL1.rawValue)\(Endpoints.heroes.rawValue)/\(heroId)\(Endpoints.series.rawValue)\(auth)\(sortBy)" // probar*/

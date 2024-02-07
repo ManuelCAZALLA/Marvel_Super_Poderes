@@ -14,17 +14,16 @@ struct Marvel_Super_PoderesApp: App {
     
     var body: some Scene {
         WindowGroup {
-          RootView()
+            RootView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(rootViewModel)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                         rootViewModel.status = .loaded
-                            
+                        
                         
                     }
                 }
-               
         }
     }
 }

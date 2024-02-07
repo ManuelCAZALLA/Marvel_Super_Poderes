@@ -26,15 +26,13 @@ struct SeriesView: View {
                     }
                 }
             }
-            
             .navigationTitle("Series")
-            
         }
     }
 }
-    
+
 #Preview {
     SeriesView(viewModelSerie: SeriesViewModel(heroe: HeroesMarvel(id: 1011442, name: "Hit-Monkey", description: "El mono saltarín", modified: "2022-04-14T19:56:30-0400", thumbnail: HeroesMarvel.Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/6/30/4ce69c2246c21", thumbnailExtension: "jpg")), testing: true))
-    }
-    
-    
+}
+
+
