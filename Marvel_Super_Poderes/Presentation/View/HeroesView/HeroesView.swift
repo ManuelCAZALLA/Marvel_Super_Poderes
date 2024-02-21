@@ -9,10 +9,9 @@ import SwiftUI
 
 struct HeroesView: View {
     @StateObject var viewModel: HeroesViewModel
-    @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
-        ZStack {
+        TabView {
             NavigationView {
                 List {
                     if let heroes = viewModel.heroes {
@@ -26,11 +25,21 @@ struct HeroesView: View {
                         }
                     }
                 }
+                .navigationTitle("Heroes")
             }
+            .tabItem {
+                Label("Heroes", systemImage: "star") //
+            }
+            
+            Text("Series")
+                .tabItem {
+                    Label("Series", systemImage: "circle")
+                }
         }
     }
 }
-            
+
+
 #Preview {
     HeroesView(viewModel: HeroesViewModel(testing: true))
     

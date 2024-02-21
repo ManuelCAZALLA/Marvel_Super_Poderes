@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 struct BaseNetwork {
     func getHeroes(sortBy orderMethod: OrderBy) -> URLRequest{
@@ -16,7 +15,7 @@ struct BaseNetwork {
         
         let url = URL(string: urlString)
         
-        // Requuest
+        // Request
         var request = URLRequest(url: url!)
         request.httpMethod = HTTPMethods.get.rawValue
         

@@ -49,7 +49,7 @@ struct SeriesRowView: View {
             }
         }
         .navigationTitle("Series")
-        
+        .id(serie.id) 
     }
 }
 
