@@ -21,7 +21,7 @@ struct SeriesView: View {
                             destination: SeriesRowView(serie: serie)
                         ) {
                             SeriesRowView(serie: serie)
-                                .id(serie.id) // Agregando ID para testing
+                                .id(serie.id)
                         }
                     }
                 }
