@@ -49,8 +49,7 @@ final class HeroesViewModel: ObservableObject {
                 self.heroes = data.data.results
             }
           
-
-.store(in: &suscriptor)
+            .store(in: &suscriptor)
     }
     
     func getHeroesTesting() {

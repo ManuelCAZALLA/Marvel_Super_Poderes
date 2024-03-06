@@ -34,7 +34,7 @@ struct HeroesRowView: View {
                 }
             )
         }
-        
+        .navigationTitle("Heroes")
     }
 }
 

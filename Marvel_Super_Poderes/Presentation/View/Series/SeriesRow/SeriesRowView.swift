@@ -23,7 +23,7 @@ struct SeriesRowView: View {
             AsyncImage(url: URL(string: "\(serie.urlSeries)")) { Image in
                 Image
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                     .cornerRadius(20)
                     .padding()
                     .id(1)
@@ -49,9 +49,12 @@ struct SeriesRowView: View {
             }
         }
         .navigationTitle("Series")
-        .id(serie.id) 
-    }
+        .id(serie.id)
+        
+   }
+        
 }
+    
 
 #Preview {
     SeriesRowView(serie: SeriesMarvel(id: 3374, title: "Hulk (2008 - 2012)", description: "General Thunderbolt Ross spent years hunting the Hulk, but now he's become one himself! As the rampaging Red Hulk, Ross strives to reconcile the man he used to be with the monster he's becomes, smashing anything that moves along the way!", modified:"2020-09-04T09:03:42-0400", thumbnail: Thumbnail(path:"http://gateway.marvel.com/v1/public/series/3374", thumbnailExtension: "jpg")))
