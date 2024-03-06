@@ -30,6 +30,7 @@ struct HeroesRowView: View {
                         .bold()
                         .foregroundColor(.white)
                         .padding()
+                        .id(1)
                 }
             )
         }

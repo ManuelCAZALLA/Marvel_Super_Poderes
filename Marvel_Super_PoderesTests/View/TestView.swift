@@ -44,9 +44,9 @@ final class TestView: XCTestCase {
         let image = try view.inspect().find(viewWithId: 0)
         XCTAssertNotNil(image)
         
-        let nameHero = try view.inspect().find(viewWithId: 1)
+      let nameHero = try view.inspect().find(viewWithId: 1)
         XCTAssertNotNil(nameHero)
-        
+     
     }
     
     func testSeriesRowView() throws {
