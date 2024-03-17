@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import Combine
+
 
 final class RootViewModel: ObservableObject {
-    private var suscriptor: Set<AnyCancellable> = []
     
     @Published var status = Status.none
     @Published var selectedHero: HeroesMarvel?
