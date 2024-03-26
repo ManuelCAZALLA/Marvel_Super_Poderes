@@ -15,7 +15,7 @@ final class HeroesViewModel: ObservableObject {
     var suscriptor = Set<AnyCancellable>()
     
     init(testing: Bool = false){
-       
+        
         if (testing){
             getHeroesTesting()
         }else {
@@ -45,10 +45,10 @@ final class HeroesViewModel: ObservableObject {
                     self.status = .loaded
                 }
             } receiveValue: { data in
-               
+                
                 self.heroes = data.data.results
             }
-          
+        
             .store(in: &suscriptor)
     }
     
@@ -69,9 +69,5 @@ final class HeroesViewModel: ObservableObject {
         
         return [hero1, hero2, hero3]
         
-        
-    }
-   
-    
-   
+        }
 }
