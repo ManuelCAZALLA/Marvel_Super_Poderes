@@ -70,9 +70,6 @@ struct InitialSplash: View {
     }
 }
 
-
-
-
 #Preview {
     InitialSplash()
 }
