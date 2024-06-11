@@ -68,6 +68,5 @@ final class HeroesViewModel: ObservableObject {
         
         
         return [hero1, hero2, hero3]
-        
     }
 }
