@@ -65,5 +65,4 @@ final class SeriesViewModel: ObservableObject {
         return [serie1,serie2,serie3]
         
     }
-    
 }

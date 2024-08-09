@@ -40,8 +40,6 @@ struct BaseNetwork {
         return request
         
     }
-    
-   
 }
 
 

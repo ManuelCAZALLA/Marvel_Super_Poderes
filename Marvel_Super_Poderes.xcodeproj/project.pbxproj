@@ -21,13 +21,14 @@
 		3C0C6A322AFF68CF005E8D24 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A312AFF68CF005E8D24 /* StatusModel.swift */; };
 		3C0C6A352AFF7493005E8D24 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A342AFF7493005E8D24 /* Contants.swift */; };
 		3C0C6A372AFF7A84005E8D24 /* HeroesMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6A362AFF7A84005E8D24 /* HeroesMarvel.swift */; };
+		3C12419C2C668B10000794F7 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 3C12419B2C668B10000794F7 /* ViewInspector */; };
+		3C12419E2C668B19000794F7 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 3C12419D2C668B19000794F7 /* ViewInspector */; };
 		3C13F6E72B04A370001F95F3 /* SecondSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F6E62B04A370001F95F3 /* SecondSplashView.swift */; };
 		3C13F6EA2B04A3B1001F95F3 /* SeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F6E92B04A3B1001F95F3 /* SeriesView.swift */; };
 		3C13F6ED2B04E5A1001F95F3 /* HeroesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F6EC2B04E5A1001F95F3 /* HeroesRowView.swift */; };
 		3C148CE32B06269D00576575 /* SeriesMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C148CE22B06269D00576575 /* SeriesMarvel.swift */; };
 		3C17CD752B03E83C00A6B3D1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD742B03E83C00A6B3D1 /* RootView.swift */; };
 		3C17CD772B03EAA700A6B3D1 /* InitialSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17CD762B03EAA700A6B3D1 /* InitialSplash.swift */; };
-		3CB64FC52B0A046A007444A8 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 3CB64FC42B0A046A007444A8 /* ViewInspector */; };
 		3CB64FCF2B0A632A007444A8 /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64FCE2B0A632A007444A8 /* TestModels.swift */; };
 		3CB64FD12B0A646D007444A8 /* TestViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64FD02B0A646D007444A8 /* TestViewModels.swift */; };
 		3CB64FD32B0A650A007444A8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB64FD22B0A650A007444A8 /* TestView.swift */; };
@@ -99,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB64FC52B0A046A007444A8 /* ViewInspector in Frameworks */,
+				3C12419C2C668B10000794F7 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C12419E2C668B19000794F7 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +131,7 @@
 				3C0C69F02AFD2CE9005E8D24 /* Marvel_Super_PoderesTests */,
 				3C0C69FA2AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests */,
 				3C0C69D92AFD2CE6005E8D24 /* Products */,
+				3C12419A2C668B07000794F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +263,13 @@
 			path = Constans;
 			sourceTree = "<group>";
 		};
+		3C12419A2C668B07000794F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C13F6E52B04A34B001F95F3 /* SecondSplash */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,7 +388,7 @@
 			);
 			name = Marvel_Super_PoderesTests;
 			packageProductDependencies = (
-				3CB64FC42B0A046A007444A8 /* ViewInspector */,
+				3C12419B2C668B10000794F7 /* ViewInspector */,
 			);
 			productName = Marvel_Super_PoderesTests;
 			productReference = 3C0C69ED2AFD2CE9005E8D24 /* Marvel_Super_PoderesTests.xctest */;
@@ -398,6 +408,9 @@
 				3C0C69F92AFD2CE9005E8D24 /* PBXTargetDependency */,
 			);
 			name = Marvel_Super_PoderesUITests;
+			packageProductDependencies = (
+				3C12419D2C668B19000794F7 /* ViewInspector */,
+			);
 			productName = Marvel_Super_PoderesUITests;
 			productReference = 3C0C69F72AFD2CE9005E8D24 /* Marvel_Super_PoderesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -410,7 +423,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					3C0C69D72AFD2CE6005E8D24 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -436,7 +449,7 @@
 			);
 			mainGroup = 3C0C69CF2AFD2CE6005E8D24;
 			packageReferences = (
-				3CB64FC32B0A046A007444A8 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				3C1241992C668AE4000794F7 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = 3C0C69D92AFD2CE6005E8D24 /* Products */;
 			projectDirPath = "";
@@ -543,6 +556,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -606,6 +620,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -833,20 +848,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3CB64FC32B0A046A007444A8 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+		3C1241992C668AE4000794F7 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/ViewInspector";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.8;
+				minimumVersion = 0.9.11;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3CB64FC42B0A046A007444A8 /* ViewInspector */ = {
+		3C12419B2C668B10000794F7 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3CB64FC32B0A046A007444A8 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			package = 3C1241992C668AE4000794F7 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+		3C12419D2C668B19000794F7 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C1241992C668AE4000794F7 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */
