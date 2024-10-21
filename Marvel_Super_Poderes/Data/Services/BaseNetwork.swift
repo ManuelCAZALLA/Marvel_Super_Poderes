@@ -8,6 +8,7 @@
 import Foundation
 
 struct BaseNetwork {
+    
     func getHeroes(sortBy orderMethod: OrderBy) -> URLRequest{
         let auth = "?ts=\(Server.ts.rawValue)&apikey=\(Server.apiKey.rawValue)&hash=\(Server.hash1.rawValue)"
         let sortBy = "&orderBy=\(orderMethod.rawValue)"
@@ -38,8 +39,7 @@ struct BaseNetwork {
         request.httpMethod = HTTPMethods.get.rawValue
         
         return request
-        
-    }
+        }
 }
 
 
