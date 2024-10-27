@@ -7,12 +7,10 @@
 
 import Foundation
 
-
 final class RootViewModel: ObservableObject {
     
     @Published var status = Status.none
     @Published var selectedHero: HeroesMarvel?
-    
     
 }
 
